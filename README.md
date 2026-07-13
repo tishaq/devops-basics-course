@@ -35,6 +35,86 @@ Everything is plain Markdown, so the whole course is versionable, reviewable via
 
 See `SYLLABUS.md` for the week-by-week schedule and grading.
 
+## Getting Started
+
+### 1. Install Git
+
+Check whether you already have it:
+
+```bash
+git --version
+```
+
+If that prints a version (any 2.x is fine), skip ahead. Otherwise:
+
+- **macOS:** run `xcode-select --install` (installs Apple's command-line tools, including Git), or `brew install git` if you use [Homebrew](https://brew.sh/).
+- **Windows:** install [Git for Windows](https://git-scm.com/download/win), which includes Git Bash — use Git Bash for the course labs, since they assume a Unix-style shell.
+- **Linux (Debian/Ubuntu):** `sudo apt update && sudo apt install git`
+- **Linux (Fedora/RHEL):** `sudo dnf install git`
+
+Then tell Git who you are (used to attribute your commits):
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+
+### 2. Install Node.js
+
+The sample app and the course tooling need **Node.js 18 or newer** (20 LTS recommended). Check first:
+
+```bash
+node --version
+```
+
+If you need to install or upgrade:
+
+- **Any platform (recommended):** install [nvm](https://github.com/nvm-sh/nvm) (Node Version Manager), then:
+
+```bash
+nvm install 20
+nvm use 20
+```
+
+  On Windows, use [nvm-windows](https://github.com/coreybutler/nvm-windows) instead.
+
+- **macOS:** `brew install node@20`
+- **Windows:** download the LTS installer from [nodejs.org](https://nodejs.org/en/download)
+- **Linux (Debian/Ubuntu):** use [NodeSource](https://github.com/nodesource/distributions): `curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - && sudo apt install nodejs`
+
+`npm` ships with Node.js — verify both:
+
+```bash
+node --version   # v20.x.x or newer
+npm --version
+```
+
+### 3. Clone the repo and install dependencies
+
+```bash
+git clone https://github.com/tishaq/devops-basics-course.git
+cd devops-basics-course
+npm install
+```
+
+If you have an SSH key set up with GitHub, you can clone over SSH instead:
+
+```bash
+git clone git@github.com:tishaq/devops-basics-course.git
+```
+
+### 4. Sanity check
+
+Make sure everything works by running the sample app's tests:
+
+```bash
+cd sample-app
+npm test    # 6 tests should pass
+cd ..
+```
+
+You're ready — start with module 1 in `modules/01-what-is-devops/`.
+
 ## Building the Slides
 
 Slide decks are written for [Marp](https://marp.app/). To export them:
@@ -76,6 +156,6 @@ Alternatively, read them as plain Markdown in your editor's preview or on GitHub
 ## Prerequisites
 
 - Comfortable writing code in at least one language (labs use JavaScript/Node.js, but the code is intentionally simple)
-- Git installed and a GitHub account
+- Git and Node.js 18+ installed (see [Getting Started](#getting-started)) and a GitHub account
 - Docker Desktop (from module 6 onward)
 - A terminal and a text editor
