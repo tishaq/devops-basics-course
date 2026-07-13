@@ -9,6 +9,7 @@ Everything is plain Markdown, so the whole course is versionable, reviewable via
 | Path | Contents |
 | --- | --- |
 | `SYLLABUS.md` | Schedule, prerequisites, grading breakdown |
+| `TIMETABLE.md` | Detailed 14-week session-by-session timetable |
 | `modules/NN-topic/slides.md` | Marp slide deck for the lecture (~20-30 slides, with speaker notes) |
 | `modules/NN-topic/handout.md` | In-depth reading document for the module |
 | `modules/NN-topic/lab.md` | Hands-on lab with numbered steps, expected output, and troubleshooting |
