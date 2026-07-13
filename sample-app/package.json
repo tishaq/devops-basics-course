@@ -1,0 +1,12 @@
+{
+  "name": "devops-demo-app",
+  "version": "1.0.0",
+  "description": "Tiny web service used as the running example throughout the DevOps Basics course.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test",
+    "lint": "npx eslint ."
+  },
+  "license": "MIT"
+}

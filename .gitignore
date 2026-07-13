@@ -1,0 +1,5 @@
+node_modules/
+dist/
+*.pdf
+modules/**/slides.html
+.DS_Store
