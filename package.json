@@ -4,10 +4,12 @@
   "description": "A 12-module DevOps fundamentals course for developers: Marp slides, handouts, labs, quizzes, and a capstone project.",
   "private": true,
   "scripts": {
+    "docs:html": "node scripts/build-docs.js",
     "slides:html": "marp modules/01-what-is-devops/slides.md modules/02-git-collaboration/slides.md modules/03-linux-shell-networking/slides.md modules/04-continuous-integration/slides.md modules/05-testing-quality-gates/slides.md modules/06-containers-docker/slides.md modules/07-kubernetes/slides.md modules/08-infrastructure-as-code/slides.md modules/09-config-secrets/slides.md modules/10-continuous-delivery/slides.md modules/11-observability/slides.md modules/12-devsecops-sre/slides.md --theme-set themes/course.css --html --no-stdin",
     "slides:pdf": "marp modules/01-what-is-devops/slides.md modules/02-git-collaboration/slides.md modules/03-linux-shell-networking/slides.md modules/04-continuous-integration/slides.md modules/05-testing-quality-gates/slides.md modules/06-containers-docker/slides.md modules/07-kubernetes/slides.md modules/08-infrastructure-as-code/slides.md modules/09-config-secrets/slides.md modules/10-continuous-delivery/slides.md modules/11-observability/slides.md modules/12-devsecops-sre/slides.md --theme-set themes/course.css --pdf --allow-local-files --no-stdin"
   },
   "devDependencies": {
-    "@marp-team/marp-cli": "^4.0.0"
+    "@marp-team/marp-cli": "^4.0.0",
+    "marked": "^18.0.6"
   }
 }

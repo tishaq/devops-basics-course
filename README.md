@@ -55,6 +55,19 @@ You can also present directly in VS Code / Cursor with the "Marp for VS Code" ex
 npx marp -s modules --theme-set themes/course.css
 ```
 
+The Marp server is only for `slides.md` decks — it renders any other Markdown file as a single fixed-size slide, cutting off long documents.
+
+## Building the Documents (handouts, labs, quizzes)
+
+To read the handouts, labs, quizzes, and assessments in a browser as scrollable pages (with Mermaid diagrams rendered):
+
+```bash
+npm run docs:html
+open dist/docs/index.html
+```
+
+Alternatively, read them as plain Markdown in your editor's preview or on GitHub.
+
 ## Using the Course
 
 - **Instructors:** each module is designed as one week — a lecture (slides), assigned reading (handout), a lab session, and a quiz. Speaker notes are embedded in the slide decks as HTML comments.
